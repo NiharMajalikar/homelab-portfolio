@@ -1,0 +1,26 @@
+output_file,status,source_file,section
+01_physical_homelab_setup.png,READY,Generated image 1 (1).png,01_Physical_Setup
+02_proxmox_mfa.png,READY,Screenshot 2026-07-19 211646.png,02_Proxmox
+03_proxmox_datacenter_dashboard.png,READY,Screenshot 2026-07-20 194708.png,02_Proxmox
+04_proxmox_storage_configuration.png,READY,Screenshot 2026-07-20 194621.png,02_Proxmox
+05_proxmox_hdd_storage.png,READY,Screenshot 2026-07-20 194806.png,02_Proxmox
+06_ubuntu_vm_summary.png,READY,Screenshot 2026-07-20 194908.png,02_Proxmox
+07_ubuntu_server_details.png,READY,Screenshot 2026-07-20 195049.png,03_Ubuntu_Docker
+08_docker_running_services.png,READY,Screenshot 2026-07-20 195110.png,03_Ubuntu_Docker
+09_ubuntu_storage_layout.png,READY,Screenshot 2026-07-20 195127.png,03_Ubuntu_Docker
+10_docker_data_root_and_storage.png,READY,Screenshot 2026-07-20 195227.png,03_Ubuntu_Docker
+11_pihole_dashboard.png,READY,Screenshot 2026-07-20 200259.png,04_Services
+12_pihole_dns_analytics.png,READY,Screenshot 2026-07-20 200317.png,04_Services
+13_pihole_client_activity_redacted.png,READY,Screenshot 2026-07-20 200327.png,04_Services
+14_pihole_group_management.png,READY,Screenshot 2026-07-20 200340.png,04_Services
+15_pihole_clients_redacted.png,READY,Screenshot 2026-07-20 200351.png,04_Services
+16_uptime_kuma_dashboard.png,READY,Screenshot 2026-07-20 200453.png,04_Services
+17_nextcloud_dashboard.png,READY,Screenshot 2026-07-20 201345.png,04_Services
+18_backup_script_redacted.png,READY,Screenshot 2026-07-20 201723.png,05_Backup_Automation
+19_backup_history.png,READY,Screenshot 2026-07-20 201755.png,05_Backup_Automation
+20_weekly_backup_cron.png,READY,Screenshot 2026-07-20 201821.png,05_Backup_Automation
+21_backup_health_status.png,READY,Screenshot 2026-07-20 201906.png,05_Backup_Automation
+22_architecture_diagram.png,READY,architecture.png,06_Diagrams
+23_remote_dns_flow.png,READY,remote_dns.png,06_Diagrams
+24_backup_flow.png,READY,backup_flow.png,06_Diagrams
+25_cicd_flow.png,READY,cicd_flow.png,06_Diagrams
