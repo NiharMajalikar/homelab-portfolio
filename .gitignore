@@ -1,0 +1,8 @@
+/dist/
+/node_modules/
+/outputs/
+/tmp/
+/work/
+.DS_Store
+npm-debug.log*
+pnpm-debug.log*
