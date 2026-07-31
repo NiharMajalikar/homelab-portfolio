@@ -169,12 +169,12 @@ To replace a placeholder:
 ## Resume and LinkedIn
 
 The portfolio links to the verified
-[LinkedIn profile](https://www.linkedin.com/in/nihar-majalikar-1bb75b199/) and includes
+[LinkedIn profile](https://www.linkedin.com/in/nihar-ravi-majalikar-1bb75b199/) and includes
 `public/downloads/nihar-majalikar-resume-public.pdf`.
 
 The public resume is rebuilt from the supplied resume content and intentionally omits the original
-street location, postcode, personal email address and phone number. The source DOCX is not modified
-or published.
+street location, postcode, personal email address and phone number. It includes clickable LinkedIn,
+GitHub and portfolio links. The source DOCX is not modified or published.
 
 ## Content and security notes
 

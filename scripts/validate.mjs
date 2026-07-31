@@ -100,7 +100,7 @@ const publicResumePath = resolve(
 );
 await access(publicResumePath);
 
-if (!html.includes("linkedin.com/in/nihar-majalikar-1bb75b199")) {
+if (!html.includes("linkedin.com/in/nihar-ravi-majalikar-1bb75b199")) {
   throw new Error("Verified LinkedIn profile is missing from the generated site");
 }
 
