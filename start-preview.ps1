@@ -3,22 +3,19 @@ param(
   [int]$Port = 4173
 )
 
-$systemNode = Get-Command node -ErrorAction SilentlyContinue
-$bundledNode = Join-Path $env:USERPROFILE '.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe'
+$systemPnpm = Get-Command pnpm -ErrorAction SilentlyContinue
+$bundledPnpm = Join-Path $env:USERPROFILE '.cache\codex-runtimes\codex-primary-runtime\dependencies\bin\fallback\pnpm.cmd'
 
-if ($systemNode) {
-  $nodeExecutable = $systemNode.Source
-} elseif (Test-Path -LiteralPath $bundledNode) {
-  $nodeExecutable = $bundledNode
+if ($systemPnpm) {
+  $pnpmExecutable = $systemPnpm.Source
+} elseif (Test-Path -LiteralPath $bundledPnpm) {
+  $pnpmExecutable = $bundledPnpm
 } else {
-  throw 'Node.js 22 or newer is required. Install Node.js from https://nodejs.org/ and run this script again.'
+  throw 'pnpm and Node.js 20.9 or newer are required. Install Node.js, run corepack enable, and try again.'
 }
-
-$env:PORT = [string]$Port
-$serverScript = Join-Path $PSScriptRoot 'scripts\dev.mjs'
 
 Write-Host "Portfolio preview: http://127.0.0.1:$Port/"
 Write-Host 'Press Ctrl+C to stop the preview server.'
 
-& $nodeExecutable $serverScript
+& $pnpmExecutable dev --hostname 127.0.0.1 --port $Port
 exit $LASTEXITCODE

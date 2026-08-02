@@ -4,7 +4,7 @@
 
 This document is the visual and experience specification for Nihar Majalikar's public portfolio. It governs layout, hierarchy, typography, colour, imagery, interaction, accessibility, and performance. `AGENTS.md` governs repository workflow and engineering conventions; this file governs presentation. When they conflict, follow the more accessible and privacy-preserving rule.
 
-The site must remain a dependency-free static website suitable for GitHub Pages unless a future requirement clearly justifies an architectural change.
+The implementation uses Next.js, React, TypeScript, Tailwind CSS, Framer Motion and Lucide React. It must retain a static export for GitHub Pages while remaining compatible with Vercel.
 
 ## Brand Purpose
 
@@ -282,7 +282,7 @@ Do not add:
 - Fabricated dashboards, metrics, command output, testimonials, or employer logos.
 - Skill percentages, generic stock imagery, or invented project statistics.
 - Heavy glassmorphism, excessive glow, gradient text, or decorative card grids.
-- A framework, animation library, or icon package solely for visual novelty.
+- Additional frameworks, animation libraries, or icon packages without a measured need.
 - Auto-playing media, custom cursors, scroll hijacking, or parallax.
 - More top-level navigation items when a grouped project structure will work.
 - Private thesis or infrastructure information that is unsafe for a public repository.
@@ -301,7 +301,7 @@ Before approving a visual implementation:
 - [ ] No horizontal overflow appears at 360px.
 - [ ] Images have accurate alt text, captions, and dimensions.
 - [ ] Sensitive data has been reviewed and redacted.
-- [ ] `npm run build` and `npm test` pass.
+- [ ] `pnpm build` and `pnpm test` pass.
 - [ ] The production build meets the stated Core Web Vitals targets when measured.
 
 ## Research References

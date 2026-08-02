@@ -1,0 +1,88 @@
+import type { SkillCategory } from "@/types/portfolio";
+
+export const skillCategories: SkillCategory[] = [
+  {
+    title: "Networking",
+    description:
+      "Addressing, routing, switching, secure access and fault isolation.",
+    skills: [
+      "TCP/IP",
+      "VLANs",
+      "STP and RSTP",
+      "EtherChannel",
+      "OSPF",
+      "EIGRP",
+      "RIP",
+      "IPv4 and IPv6",
+      "DHCP",
+      "DNS",
+      "NAT and PAT",
+      "Access Control Lists",
+      "HSRP and VRRP",
+      "WLAN",
+      "VPN",
+      "Network troubleshooting",
+      "Network security fundamentals",
+      "Routing and switching",
+      "Wireless network planning",
+    ],
+  },
+  {
+    title: "Infrastructure and systems",
+    description:
+      "Virtualised services, endpoints, storage, monitoring and recovery.",
+    skills: [
+      "Proxmox",
+      "Docker",
+      "Linux fundamentals",
+      "Windows administration",
+      "Microsoft Intune",
+      "Microsoft Entra ID",
+      "Active Directory fundamentals",
+      "Endpoint management",
+      "Virtual machines",
+      "NAS",
+      "Self-hosted services",
+      "Infrastructure monitoring",
+      "Backup fundamentals",
+      "System troubleshooting",
+    ],
+  },
+  {
+    title: "Cloud and technical tools",
+    description:
+      "Platforms used to configure, observe, model and deliver systems.",
+    skills: [
+      "Microsoft Azure fundamentals",
+      "Git",
+      "GitHub",
+      "GitHub Actions",
+      "Wireshark",
+      "Cisco Packet Tracer",
+      "GNS3",
+      "QGIS",
+      "Uptime Kuma",
+      "Tailscale",
+      "WireGuard",
+      "Visual Studio Code",
+      "Microsoft 365 administration fundamentals",
+    ],
+  },
+  {
+    title: "Programming and automation",
+    description:
+      "Fundamental scripting and agent-assisted operational workflows.",
+    skills: [
+      "Python fundamentals",
+      "Bash fundamentals",
+      "PowerShell fundamentals",
+      "REST APIs",
+      "AI agents",
+      "LangGraph fundamentals",
+      "Infrastructure monitoring",
+      "Service-status automation",
+      "Basic scripting",
+      "Technical documentation",
+    ],
+  },
+];
