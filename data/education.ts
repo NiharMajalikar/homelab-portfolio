@@ -5,7 +5,7 @@ export const education: EducationItem[] = [
     qualification: "Master of Engineering in Telecommunications and Networking",
     institution: "La Trobe University",
     location: "Melbourne, Australia",
-    period: "July 2024 - June 2026",
+    period: "July 2024 - July 2026",
     summary:
       "Postgraduate engineering study focused on modern networks, telecommunications planning, infrastructure and applied research.",
     focusAreas: [
