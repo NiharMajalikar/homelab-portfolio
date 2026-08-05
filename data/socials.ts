@@ -11,6 +11,6 @@ export const socials: SocialLink[] = [
   },
   {
     label: "Email",
-    href: "mailto:niharmajalikar@gmail.com",
+    href: "mailto:nihar.majalikar.engineering@gmail.com",
   },
 ];

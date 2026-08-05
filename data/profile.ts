@@ -4,7 +4,7 @@ export const profile = {
   headline:
     "Telecommunications and Networking Engineer | IT Support | Network Infrastructure | Cloud and Endpoint Management",
   location: "Melbourne, Victoria",
-  email: "niharmajalikar@gmail.com",
+  email: "nihar.majalikar.engineering@gmail.com",
   resumePath: "/downloads/nihar-majalikar-resume-public.pdf",
   summary:
     "CCNA-certified Master of Engineering graduate in Telecommunications and Networking with practical, evidence-led work across routing, infrastructure, endpoint security, virtualisation, monitoring and technical documentation.",

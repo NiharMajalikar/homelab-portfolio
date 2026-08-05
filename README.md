@@ -18,7 +18,7 @@ A recruiter-focused portfolio for telecommunications, networking, IT support, cl
 - Structured skills, projects, certifications, education and profile data
 - Project filters and native keyboard-accessible project details
 - Sanitised evidence gallery plus clearly labelled planned captures
-- Direct email contact through `niharmajalikar@gmail.com`
+- Direct email contact through `nihar.majalikar.engineering@gmail.com`
 - Open Graph, Twitter, canonical, manifest, robots, sitemap and JSON-LD metadata
 
 ## Prerequisites and local setup
@@ -109,7 +109,7 @@ The implementation uses semantic landmarks, logical headings, visible focus stat
 
 ## Security and content boundaries
 
-- Contact is provided only through the public `mailto:` link for `niharmajalikar@gmail.com`; no form service or email credential is bundled in the site.
+- Contact is provided only through the public `mailto:` link for `nihar.majalikar.engineering@gmail.com`; no form service or email credential is bundled in the site.
 - The public site omits phone numbers, street addresses, credentials, raw configurations and student IDs.
 - University labs are labelled as controlled or simulated work, not production deployments.
 - Current and planned capabilities are separated, especially for the homelab status application.
