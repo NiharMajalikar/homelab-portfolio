@@ -1,4 +1,5 @@
 import type { Project } from "@/types/portfolio";
+import { linkedInUrl } from "@/data/socials";
 
 export const projects: Project[] = [
   {
@@ -152,8 +153,10 @@ export const projects: Project[] = [
     links: [
       { label: "Research evidence", href: "#evidence" },
       {
-        label: "Public thesis PDF",
-        href: "/downloads/nihar-majalikar-masters-thesis-public.pdf",
+        label: "Request thesis access",
+        href: linkedInUrl,
+        external: true,
+        note: "Requests are reviewed before restricted OneDrive access is granted.",
       },
     ],
     image: {
@@ -165,7 +168,7 @@ export const projects: Project[] = [
     status: "Completed",
     featured: true,
     evidenceNote:
-      "Academic research and simulation, not a production deployment. Confidential operational details are excluded.",
+      "Academic research and simulation, not a production deployment. The full thesis is stored privately and shared only after an access request is reviewed.",
   },
   {
     slug: "lte-network-planning",

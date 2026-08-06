@@ -1,5 +1,8 @@
 import type { SocialLink } from "@/types/portfolio";
 
+export const linkedInUrl =
+  "https://www.linkedin.com/in/nihar-ravi-majalikar-1bb75b199/";
+
 export const socials: SocialLink[] = [
   {
     label: "GitHub",
@@ -7,10 +10,6 @@ export const socials: SocialLink[] = [
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/nihar-ravi-majalikar-1bb75b199/",
-  },
-  {
-    label: "Email",
-    href: "mailto:nihar.majalikar.engineering@gmail.com",
+    href: linkedInUrl,
   },
 ];

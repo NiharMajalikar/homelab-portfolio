@@ -21,7 +21,6 @@ export default function HomePage() {
         "@id": `${siteUrl}/#person`,
         name: profile.name,
         url: siteUrl,
-        email: `mailto:${profile.email}`,
         homeLocation: { "@type": "Place", name: profile.location },
         jobTitle: "Telecommunications and Networking Engineer",
         sameAs: [

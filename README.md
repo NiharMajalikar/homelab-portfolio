@@ -18,7 +18,7 @@ A recruiter-focused portfolio for telecommunications, networking, IT support, cl
 - Structured skills, projects, certifications, education and profile data
 - Project filters and native keyboard-accessible project details
 - Sanitised evidence gallery plus clearly labelled planned captures
-- Direct email contact through `nihar.majalikar.engineering@gmail.com`
+- Direct professional contact and thesis-access requests through LinkedIn
 - Open Graph, Twitter, canonical, manifest, robots, sitemap and JSON-LD metadata
 
 ## Prerequisites and local setup
@@ -85,7 +85,7 @@ Most content changes require no component edits:
 - Navigation: `data/navigation.ts`
 - Evidence and planned screenshots: `data/evidence.ts`
 
-Put approved images under `public/assets/` and public-safe downloads under `public/downloads/`. Supply accurate width, height, alt text and captions. Never publish raw coursework, credentials, student identifiers, private network details or unreviewed screenshots.
+Put approved images under `public/assets/` and public-safe downloads under `public/downloads/`. Supply accurate width, height, alt text and captions. Never publish raw coursework, credentials, student identifiers, private network details or unreviewed screenshots. The full master's thesis is stored privately in OneDrive; visitors request access through LinkedIn and receive access only after review.
 
 ## Project structure
 
@@ -95,7 +95,7 @@ components/           Reusable server and interactive UI components
 data/                 Typed portfolio content
 lib/                  Site URL and base-path helpers
 public/assets/         Sanitised images and diagrams
-public/downloads/      Approved public PDFs
+public/downloads/      Approved public downloads, currently the public resume
 scripts/               Production export validation
 types/                 Shared TypeScript interfaces
 .github/workflows/     GitHub Pages deployment
@@ -109,7 +109,8 @@ The implementation uses semantic landmarks, logical headings, visible focus stat
 
 ## Security and content boundaries
 
-- Contact is provided only through the public `mailto:` link for `nihar.majalikar.engineering@gmail.com`; no form service or email credential is bundled in the site.
+- Contact and thesis-access requests are handled through the public LinkedIn profile; the static site publishes no email address and bundles no form-service credentials.
+- The full thesis PDF is excluded from the static export and public repository tree. Its case-study summary and sanitised evidence remain public; access to the complete document is granted individually from private OneDrive storage.
 - The public site omits phone numbers, street addresses, credentials, raw configurations and student IDs.
 - University labs are labelled as controlled or simulated work, not production deployments.
 - Current and planned capabilities are separated, especially for the homelab status application.

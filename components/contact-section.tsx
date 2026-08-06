@@ -1,6 +1,7 @@
-import { Mail, MapPin } from "lucide-react";
+import { ContactRound, MapPin } from "lucide-react";
 
 import { profile } from "@/data/profile";
+import { linkedInUrl } from "@/data/socials";
 
 import { MotionReveal } from "./motion-reveal";
 import { SectionHeading } from "./section-heading";
@@ -23,7 +24,7 @@ export function ContactSection() {
         <MotionReveal className="contact-details contact-email-card">
           <p>
             For roles, graduate programs, project discussions or portfolio
-            feedback, contact me directly by email.
+            feedback, contact me through LinkedIn.
           </p>
           <div className="contact-location">
             <MapPin aria-hidden="true" />
@@ -34,14 +35,17 @@ export function ContactSection() {
           </div>
           <a
             className="primary-button contact-email-button"
-            href={`mailto:${profile.email}`}
+            href={linkedInUrl}
+            target="_blank"
+            rel="noreferrer"
           >
-            <Mail aria-hidden="true" />
-            Email {profile.email}
+            <ContactRound aria-hidden="true" />
+            Message me on LinkedIn
           </a>
           <p className="privacy-copy">
-            Email is the only contact method used on this portfolio. The public
-            site does not publish a phone number or street address.
+            LinkedIn is the public contact method used on this portfolio. The
+            site does not publish an email address, phone number or street
+            address.
           </p>
         </MotionReveal>
       </div>

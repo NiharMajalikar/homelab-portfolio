@@ -19,6 +19,23 @@ for (const relativePath of requiredOutputFiles) {
   await access(path.join(outputDirectory, relativePath));
 }
 
+const forbiddenOutputFiles = [
+  "downloads/nihar-majalikar-masters-thesis-public.pdf",
+];
+
+for (const relativePath of forbiddenOutputFiles) {
+  try {
+    await access(path.join(outputDirectory, relativePath));
+    throw new Error(
+      `Private file was included in the static export: ${relativePath}.`,
+    );
+  } catch (error) {
+    if (error?.code !== "ENOENT") {
+      throw error;
+    }
+  }
+}
+
 const html = await readFile(htmlPath, "utf8");
 const requiredSectionIds = [
   "home",
@@ -61,6 +78,12 @@ const forbiddenPublicPatterns = [
     value: visiblePublicText,
     fixture: "87654321",
   },
+  {
+    label: "email address",
+    pattern: /\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}\b/i,
+    value: visiblePublicText,
+    fixture: "portfolio@example.com",
+  },
 ];
 
 forbiddenPublicPatterns.push({
@@ -68,6 +91,13 @@ forbiddenPublicPatterns.push({
   pattern: /href=["']tel:/i,
   value: html,
   fixture: 'href="tel:+61000000000"',
+});
+
+forbiddenPublicPatterns.push({
+  label: "email link",
+  pattern: /href=["']mailto:/i,
+  value: html,
+  fixture: 'href="mailto:portfolio@example.com"',
 });
 
 for (const { label, pattern, value, fixture } of forbiddenPublicPatterns) {

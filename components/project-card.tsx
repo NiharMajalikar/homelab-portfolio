@@ -17,7 +17,7 @@ import type { Project } from "@/types/portfolio";
 const linkIcons = {
   Repository: Code2,
   "Private repository": Code2,
-  "Public thesis PDF": FileText,
+  "Request thesis access": FileText,
 };
 
 export function ProjectCard({ project }: { project: Project }) {
