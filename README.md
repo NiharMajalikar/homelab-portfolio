@@ -18,6 +18,7 @@ A recruiter-focused portfolio for telecommunications, networking, IT support, cl
 - Structured skills, projects, certifications, education and profile data
 - Project filters and native keyboard-accessible project details
 - Sanitised evidence gallery plus clearly labelled planned captures
+- August 2026 network-migration and service-recovery case study
 - Direct professional contact and thesis-access requests through LinkedIn
 - Open Graph, Twitter, canonical, manifest, robots, sitemap and JSON-LD metadata
 
@@ -43,7 +44,7 @@ NEXT_PUBLIC_BASE_PATH=
 
 - `NEXT_PUBLIC_SITE_URL` sets canonical and social metadata.
 - `NEXT_PUBLIC_BASE_PATH` is empty on Vercel and `/homelab-portfolio` on this repository's GitHub Pages workflow.
-- Contact uses the email stored in `data/profile.ts`; no form service, API key or email credential is required.
+- Contact is routed through the public LinkedIn profile; no form service, API key or email credential is required.
 
 ## Development commands
 
@@ -84,6 +85,7 @@ Most content changes require no component edits:
 - Social links: `data/socials.ts`
 - Navigation: `data/navigation.ts`
 - Evidence and planned screenshots: `data/evidence.ts`
+- Homelab recovery claims and evidence decisions: `docs/homelab-network-migration-recovery.md`
 
 Put approved images under `public/assets/` and public-safe downloads under `public/downloads/`. Supply accurate width, height, alt text and captions. Never publish raw coursework, credentials, student identifiers, private network details or unreviewed screenshots. The full master's thesis is stored privately in OneDrive; visitors request access through LinkedIn and receive access only after review.
 
@@ -103,7 +105,7 @@ types/                 Shared TypeScript interfaces
 
 ## Screenshots and accessibility
 
-The evidence section uses reviewed repository images and lists five planned captures: Portainer, Tailscale administration, a successful GitHub Actions deployment, the status application and Nextcloud mobile access. Replace a label only after adding and reviewing the corresponding public-safe image.
+The evidence section uses reviewed, privacy-safe captures for Proxmox, Portainer, Nextcloud, Pi-hole and Uptime Kuma. The Pi-hole mobile capture supports DNS-filtering totals only; it does not prove Tailscale remote access. Planned captures remain for Tailscale administration, a successful GitHub Actions deployment, the status application and Nextcloud mobile access.
 
 The implementation uses semantic landmarks, logical headings, visible focus states, a skip link, native controls, descriptive alt text, 24-pixel-or-larger targets and reduced-motion support. Check keyboard flows and 360, 768 and 1440 CSS-pixel layouts after visual changes.
 
@@ -114,10 +116,14 @@ The implementation uses semantic landmarks, logical headings, visible focus stat
 - The public site omits phone numbers, street addresses, credentials, raw configurations and student IDs.
 - University labs are labelled as controlled or simulated work, not production deployments.
 - Current and planned capabilities are separated, especially for the homelab status application.
+- Tailscale is documented as installed on the Ubuntu Docker VM; external-access validation remains pending.
+- Automated and off-site backup are planned improvements, not implemented capabilities.
 - Public PDFs and screenshots must be sanitised before replacement.
 
 ## Future improvements
 
-- Add the five planned, redacted screenshots.
+- Validate Tailscale external access and capture redacted evidence.
+- Implement, test and document automated and off-site backup.
+- Add redacted GitHub Actions, status-application and Nextcloud mobile captures.
 - Add a custom domain and update `NEXT_PUBLIC_SITE_URL`.
 - Run field Lighthouse monitoring after deployment and optimise any measured regressions.

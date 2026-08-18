@@ -12,7 +12,12 @@ const requiredOutputFiles = [
   "sitemap.xml",
   "manifest.webmanifest",
   "downloads/nihar-majalikar-resume-public.pdf",
-  "assets/diagrams/22_architecture_diagram.png",
+  "assets/diagrams/homelab-architecture-2026-08.svg",
+  "assets/images/homelab-proxmox-overview-2026-08.webp",
+  "assets/images/homelab-portainer-overview-2026-08.webp",
+  "assets/images/homelab-nextcloud-dashboard-2026-08.webp",
+  "assets/images/homelab-pihole-mobile-dashboard-2026-08.webp",
+  "assets/images/homelab-uptime-kuma-health-2026-08.webp",
 ];
 
 for (const relativePath of requiredOutputFiles) {
@@ -42,6 +47,7 @@ const requiredSectionIds = [
   "about",
   "skills",
   "projects",
+  "migration-recovery",
   "certifications",
   "education",
   "evidence",
@@ -113,6 +119,8 @@ const forbiddenImplementationText = [
   "ExperienceSection",
   "WorkHistory",
   "EmploymentCard",
+  "Established weekly backup execution",
+  "Weekly configuration and application-data backups",
 ];
 
 for (const value of forbiddenImplementationText) {
