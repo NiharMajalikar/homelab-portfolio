@@ -6,9 +6,9 @@ export const projects: Project[] = [
     slug: "homelab-infrastructure",
     title: "Homelab Infrastructure and Monitoring Platform",
     summary:
-      "A Proxmox-based personal lab for virtualisation, containerised services, private access, monitoring and recoverable operations.",
+      "A Proxmox-based personal lab for virtualisation, containerised services, DNS filtering, monitoring and hands-on recovery work.",
     description:
-      "An Acer Nitro 5 is repurposed as a Proxmox host. A focused Ubuntu virtual machine runs Docker services for DNS analytics, availability monitoring, private cloud storage, container management and a status page.",
+      "An Acer Nitro 5 is repurposed as a Proxmox host. An Ubuntu Docker VM runs Pi-hole, Uptime Kuma, Nextcloud with MariaDB, Portainer and a Homelab Status App. Tailscale is installed on the VM; external-access validation is pending.",
     categories: ["Homelab", "Cloud & Infrastructure", "Networking"],
     technologies: [
       "Proxmox VE",
@@ -17,30 +17,33 @@ export const projects: Project[] = [
       "Pi-hole",
       "Uptime Kuma",
       "Nextcloud",
+      "MariaDB",
+      "Portainer",
       "Tailscale",
       "GitHub Actions",
     ],
     challenge:
-      "Create a useful, observable infrastructure environment on repurposed hardware while keeping services private, documented and recoverable.",
+      "Migrate the service VM to a new private-LAN allocation, recover services affected by root-storage exhaustion and restore DNS filtering without exposing internal network details.",
     approach:
-      "Separated the virtualisation and service layers, mounted dedicated storage for Docker data, used private remote access, monitored service availability and scheduled weekly backups that publish a health signal.",
+      "Reserved the VM address through DHCP, expanded the LVM root volume from 19 GB to 38 GB, updated Nextcloud trusted domains, regenerated Pi-hole's invalid TLS certificate bundle, rebuilt Gravity and refreshed Uptime Kuma targets.",
     outcomes: [
-      "Documented the physical, virtual, storage and service layers with reviewed evidence.",
-      "Migrated Docker data away from a constrained root filesystem to dedicated storage.",
-      "Established weekly backup execution and a visible backup-health check.",
+      "Restored MariaDB and Nextcloud service health after increasing root-volume capacity.",
+      "Restored the Pi-hole web interface and DNS filtering with 98,950 blocking domains.",
+      "Verified eight monitored endpoints up with no current down states in Uptime Kuma.",
     ],
     currentFeatures: [
-      "Virtualised Ubuntu service host",
-      "Containerised DNS, monitoring and private-cloud services",
-      "Private Tailscale access",
-      "Service health checks",
-      "Weekly configuration and application-data backups",
+      "Proxmox host and Ubuntu Docker VM",
+      "Pi-hole DNS filtering",
+      "Uptime Kuma monitoring",
+      "Nextcloud with MariaDB",
+      "Portainer and Homelab Status App",
+      "Tailscale installed; external validation pending",
     ],
     plannedFeatures: [
+      "Automated and off-site backup with recovery testing",
       "AI-assisted alert summarisation",
       "Automated health recommendations",
       "Centralised operational dashboard",
-      "Configuration backup expansion",
       "Controlled patch automation and log analysis",
     ],
     links: [
@@ -49,18 +52,19 @@ export const projects: Project[] = [
         href: "https://github.com/NiharMajalikar/homelab-portfolio",
         external: true,
       },
+      { label: "Recovery case study", href: "#migration-recovery" },
       { label: "View evidence", href: "#evidence" },
     ],
     image: {
-      src: "/assets/diagrams/22_architecture_diagram.png",
-      alt: "Sanitised homelab architecture diagram showing private remote access, a Proxmox host, an Ubuntu Docker virtual machine, service containers, storage and automation",
-      width: 2479,
-      height: 1419,
+      src: "/assets/diagrams/homelab-architecture-2026-08.svg",
+      alt: "Current homelab architecture showing the private LAN, Proxmox host, Ubuntu Docker virtual machine, Pi-hole, Uptime Kuma, Nextcloud with MariaDB, Portainer, Homelab Status App and Tailscale with validation pending",
+      width: 1600,
+      height: 900,
     },
     status: "Active",
     featured: true,
     evidenceNote:
-      "Personal infrastructure project; not presented as a production enterprise deployment.",
+      "Personal infrastructure project, not a production deployment. Automated and off-site backup remain planned; Tailscale external access remains unverified.",
   },
   {
     slug: "homelab-status-app",
@@ -68,7 +72,7 @@ export const projects: Project[] = [
     summary:
       "A lightweight Docker-hosted status page deployed through GitHub Actions to present the documented state of homelab services.",
     description:
-      "Repository inspection confirms a static HTML service inventory, Docker packaging and a GitHub Actions workflow that connects through Tailscale and deploys over SSH. The displayed states are currently static labels rather than live probes.",
+      "Repository inspection confirms a static HTML service inventory, Docker packaging and a GitHub Actions workflow configured to join Tailscale and deploy over SSH. A successful deployment capture remains pending, and the displayed states are static labels rather than live probes.",
     categories: ["AI & Automation", "Homelab", "Cloud & Infrastructure"],
     technologies: [
       "HTML",
@@ -81,17 +85,17 @@ export const projects: Project[] = [
     challenge:
       "Provide one simple operational view and automate deployment to a private homelab environment.",
     approach:
-      "Containerised a small status page and created a CI/CD path that checks out the repository, joins the private network and deploys to the homelab host.",
+      "Containerised a small status page and configured a CI/CD path to check out the repository, join the private network and deploy to the homelab host.",
     outcomes: [
       "Created a central static inventory of seven named homelab services.",
       "Documented a repeatable Docker and GitHub Actions deployment path.",
-      "Established a clear baseline for future live monitoring work.",
+      "Established a clear baseline for future live monitoring and deployment validation.",
     ],
     currentFeatures: [
       "Static service inventory",
       "Status labels",
       "Docker deployment",
-      "Private CI/CD connection",
+      "Configured private CI/CD connection; validation pending",
     ],
     plannedFeatures: [
       "Live availability checks",

@@ -21,7 +21,7 @@ const principles = [
   {
     title: "Reliable by design",
     description:
-      "Prioritise maintainability, secure access, monitoring, backups and honest evidence.",
+      "Prioritise maintainability, secure access, monitoring, recovery planning and honest evidence.",
     icon: ShieldCheck,
   },
 ];

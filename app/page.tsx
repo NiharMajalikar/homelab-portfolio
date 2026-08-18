@@ -5,6 +5,7 @@ import { EducationGrid } from "@/components/education-grid";
 import { EvidenceGallery } from "@/components/evidence-gallery";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
+import { HomelabRecovery } from "@/components/homelab-recovery";
 import { Navbar } from "@/components/navbar";
 import { ProjectsSection } from "@/components/projects-section";
 import { SkillsGrid } from "@/components/skills-grid";
@@ -61,6 +62,7 @@ export default function HomePage() {
         <About />
         <SkillsGrid />
         <ProjectsSection />
+        <HomelabRecovery />
         <CertificationsGrid />
         <EducationGrid />
         <EvidenceGallery />

@@ -135,7 +135,7 @@ The page should read as a professional portfolio, not as a catalogue of homelab 
 7. **Homelab case study**
    - Platform: physical infrastructure, architecture, and Proxmox.
    - Services: Ubuntu/Docker, Pi-hole, Uptime Kuma, and Nextcloud.
-   - Data protection: storage migration and automated backups.
+   - Resilience: storage recovery and clearly labelled planned automated/off-site backup.
    - Operations: troubleshooting case studies and documented lessons.
 8. **Skills and technologies** — grouped by demonstrated evidence, not proficiency bars.
 9. **Featured gallery** — a curated default set with access to the full evidence collection.
