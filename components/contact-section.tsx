@@ -16,6 +16,7 @@ export function ContactSection() {
       <div className="page-shell">
         <MotionReveal>
           <SectionHeading
+            id="contact-title"
             eyebrow="Contact"
             title="Continue the technical conversation."
             description={profile.availability}

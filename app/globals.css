@@ -982,6 +982,187 @@ a {
   font-weight: 750;
 }
 
+.mcp-section {
+  background:
+    radial-gradient(circle at 12% 18%, var(--glow), transparent 30rem),
+    var(--background);
+}
+
+.mcp-architecture {
+  display: grid;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+}
+
+.mcp-architecture li {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.8rem;
+  align-items: center;
+  min-height: 7.5rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface);
+  padding: 1rem;
+}
+
+.mcp-stage-number {
+  color: var(--accent);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.74rem;
+  font-weight: 750;
+}
+
+.mcp-architecture h3,
+.mcp-panel h3,
+.mcp-boundary-card h3,
+.mcp-roadmap h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.mcp-architecture p,
+.mcp-tool-list p,
+.mcp-boundary-card p,
+.mcp-caveat {
+  margin: 0.4rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+.mcp-stage-arrow {
+  width: 1.1rem;
+  color: var(--accent);
+  transform: rotate(90deg);
+}
+
+.mcp-content-grid,
+.mcp-boundary-grid {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.mcp-panel,
+.mcp-boundary-card,
+.mcp-roadmap {
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.mcp-panel {
+  padding: clamp(1.25rem, 4vw, 1.75rem);
+}
+
+.mcp-panel-heading,
+.mcp-boundary-card {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+}
+
+.mcp-panel-heading > svg,
+.mcp-boundary-card > svg {
+  flex: 0 0 auto;
+  width: 1.25rem;
+  color: var(--accent);
+}
+
+.mcp-panel-heading .eyebrow,
+.mcp-roadmap .eyebrow {
+  margin-bottom: 0.35rem;
+}
+
+.mcp-tool-list {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  margin: 1.4rem 0 0;
+  padding: 0;
+}
+
+.mcp-tool-list li {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+.mcp-tool-list code {
+  color: var(--accent);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.mcp-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1.4rem 0 0;
+}
+
+.mcp-metrics > div {
+  display: flex;
+  min-height: 6.5rem;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+  background: var(--surface-muted);
+  padding: 0.9rem;
+}
+
+.mcp-metrics dt {
+  margin-top: 0.35rem;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
+.mcp-metrics dd {
+  margin: 0;
+  color: var(--accent);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: clamp(1.5rem, 5vw, 2.3rem);
+  font-weight: 760;
+}
+
+.mcp-caveat {
+  border-left: 2px solid var(--accent);
+  padding-left: 0.8rem;
+}
+
+.mcp-boundary-card {
+  padding: 1.25rem;
+}
+
+.mcp-roadmap {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+  padding: clamp(1.25rem, 4vw, 1.75rem);
+}
+
+.mcp-roadmap ul {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--text-muted);
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.mcp-roadmap li::marker {
+  color: var(--accent);
+}
+
 .certification-grid,
 .education-grid,
 .evidence-grid {
@@ -1290,6 +1471,28 @@ a {
   .recovery-stack {
     position: sticky;
     top: 6rem;
+  }
+  .mcp-architecture {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .mcp-architecture li {
+    grid-template-columns: 1fr;
+    align-content: start;
+  }
+  .mcp-stage-arrow {
+    position: absolute;
+    right: -1.05rem;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+  }
+  .mcp-content-grid,
+  .mcp-boundary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .mcp-roadmap {
+    grid-template-columns: 0.7fr 1.3fr;
+    align-items: start;
   }
   .planned-captures ul {
     grid-template-columns: repeat(2, minmax(0, 1fr));

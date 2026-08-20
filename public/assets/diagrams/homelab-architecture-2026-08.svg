@@ -55,6 +55,6 @@
 
     <rect x="80" y="725" width="1440" height="95" rx="22" fill="#0c1a2b" stroke="#263b50" stroke-width="3"/>
     <text x="800" y="768" fill="#e8f0f7" font-size="24" font-weight="700" text-anchor="middle">Next resilience improvement</text>
-    <text x="800" y="802" fill="#9eb0c1" font-size="20" text-anchor="middle">Automated and off-site backup with documented restore testing — planned, not implemented</text>
+    <text x="800" y="802" fill="#9eb0c1" font-size="20" text-anchor="middle">Integrity verification, restore testing and encrypted off-site backup — planned</text>
   </g>
 </svg>

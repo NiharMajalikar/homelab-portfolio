@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Private homelab MCP architecture</title>
+  <desc id="desc">Codex Desktop connects through a private SSH standard input and output route to a dedicated MCP utility virtual machine. Three read-only tools consume bounded, redacted reports from a forced command on the production Ubuntu Docker virtual machine. No public listener or state-changing tool is present.</desc>
+  <rect width="1600" height="900" fill="#07111f"/>
+  <text x="80" y="92" fill="#e8f0f7" font-family="Arial, sans-serif" font-size="48" font-weight="700">Private Homelab MCP Control Plane</text>
+  <text x="80" y="136" fill="#9eb0c1" font-family="Arial, sans-serif" font-size="23">Read only · private route · validated 20 August 2026</text>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="80" y="220" width="300" height="180" rx="28" fill="#103a3a" stroke="#5eead4" stroke-width="3"/>
+    <text x="230" y="292" fill="#e8f0f7" font-size="31" font-weight="700" text-anchor="middle">Codex Desktop</text>
+    <text x="230" y="338" fill="#9eb0c1" font-size="20" text-anchor="middle">Approved tool requests</text>
+    <text x="230" y="372" fill="#9eb0c1" font-size="20" text-anchor="middle">Redacted responses</text>
+
+    <path d="M380 310 H500" stroke="#7db7ff" stroke-width="7"/>
+    <path d="M490 293 L520 310 L490 327" fill="none" stroke="#7db7ff" stroke-width="7"/>
+    <text x="450" y="278" fill="#9eb0c1" font-size="18" text-anchor="middle">SSH stdio</text>
+
+    <rect x="520" y="190" width="480" height="240" rx="28" fill="#13263a" stroke="#7db7ff" stroke-width="3"/>
+    <text x="760" y="255" fill="#e8f0f7" font-size="31" font-weight="700" text-anchor="middle">Dedicated MCP Utility VM</text>
+    <text x="760" y="302" fill="#5eead4" font-size="20" text-anchor="middle">Schema · 64 KiB limit · sensitivity scan</text>
+    <text x="760" y="340" fill="#9eb0c1" font-size="20" text-anchor="middle">One-hour freshness · fail closed</text>
+    <text x="760" y="386" fill="#9eb0c1" font-size="18" text-anchor="middle">No public API, callback or reverse proxy</text>
+
+    <path d="M1000 310 H1120" stroke="#7db7ff" stroke-width="7"/>
+    <path d="M1110 293 L1140 310 L1110 327" fill="none" stroke="#7db7ff" stroke-width="7"/>
+    <text x="1070" y="278" fill="#9eb0c1" font-size="18" text-anchor="middle">forced command</text>
+
+    <rect x="1140" y="220" width="380" height="180" rx="28" fill="#0c1a2b" stroke="#5eead4" stroke-width="3"/>
+    <text x="1330" y="285" fill="#e8f0f7" font-size="29" font-weight="700" text-anchor="middle">Production Docker VM</text>
+    <text x="1330" y="332" fill="#9eb0c1" font-size="20" text-anchor="middle">Root-controlled report store</text>
+    <text x="1330" y="368" fill="#9eb0c1" font-size="20" text-anchor="middle">Bounded, redacted JSON only</text>
+
+    <text x="80" y="520" fill="#e8f0f7" font-size="27" font-weight="700">Current tool surface</text>
+    <g font-size="23" font-weight="700" text-anchor="middle">
+      <rect x="80" y="560" width="440" height="125" rx="22" fill="#13263a" stroke="#263b50" stroke-width="3"/>
+      <text x="300" y="618" fill="#e8f0f7">get_docker_status</text>
+      <text x="300" y="653" fill="#9eb0c1" font-size="18" font-weight="400">Approved service-health summary</text>
+
+      <rect x="580" y="560" width="440" height="125" rx="22" fill="#13263a" stroke="#263b50" stroke-width="3"/>
+      <text x="800" y="618" fill="#e8f0f7">get_disk_usage</text>
+      <text x="800" y="653" fill="#9eb0c1" font-size="18" font-weight="400">System and data-volume utilisation</text>
+
+      <rect x="1080" y="560" width="440" height="125" rx="22" fill="#13263a" stroke="#263b50" stroke-width="3"/>
+      <text x="1300" y="618" fill="#e8f0f7">get_backup_summary</text>
+      <text x="1300" y="653" fill="#9eb0c1" font-size="18" font-weight="400">Backup-set and manifest presence</text>
+    </g>
+
+    <rect x="80" y="750" width="1440" height="86" rx="22" fill="#0c1a2b" stroke="#263b50" stroke-width="3"/>
+    <text x="800" y="787" fill="#e8f0f7" font-size="22" font-weight="700" text-anchor="middle">Security invariant: a prompt is not an authorization boundary</text>
+    <text x="800" y="817" fill="#9eb0c1" font-size="18" text-anchor="middle">Version 1.0 has no generic shell, infrastructure control or automatic remediation</text>
+  </g>
+</svg>

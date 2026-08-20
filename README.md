@@ -19,6 +19,7 @@ A recruiter-focused portfolio for telecommunications, networking, IT support, cl
 - Project filters and native keyboard-accessible project details
 - Sanitised evidence gallery plus clearly labelled planned captures
 - August 2026 network-migration and service-recovery case study
+- August 2026 private homelab MCP control-plane case study
 - Direct professional contact and thesis-access requests through LinkedIn
 - Open Graph, Twitter, canonical, manifest, robots, sitemap and JSON-LD metadata
 
@@ -86,6 +87,7 @@ Most content changes require no component edits:
 - Navigation: `data/navigation.ts`
 - Evidence and planned screenshots: `data/evidence.ts`
 - Homelab recovery claims and evidence decisions: `docs/homelab-network-migration-recovery.md`
+- Private homelab MCP claims and evidence boundaries: `docs/private-homelab-mcp-progress.md`
 
 Put approved images under `public/assets/` and public-safe downloads under `public/downloads/`. Supply accurate width, height, alt text and captions. Never publish raw coursework, credentials, student identifiers, private network details or unreviewed screenshots. The full master's thesis is stored privately in OneDrive; visitors request access through LinkedIn and receive access only after review.
 
@@ -117,13 +119,16 @@ The implementation uses semantic landmarks, logical headings, visible focus stat
 - University labs are labelled as controlled or simulated work, not production deployments.
 - Current and planned capabilities are separated, especially for the homelab status application.
 - Tailscale is documented as installed on the Ubuntu Docker VM; external-access validation remains pending.
-- Automated and off-site backup are planned improvements, not implemented capabilities.
+- A separate utility VM provides three read-only MCP tools over SSH standard input/output on a private route; it exposes no public listener or state-changing capability.
+- Two local backup sets and a manifest are present, but integrity and restoreability are unverified. Automated integrity checks, restore testing and encrypted off-site backup remain planned.
 - Public PDFs and screenshots must be sanitised before replacement.
 
 ## Future improvements
 
 - Validate Tailscale external access and capture redacted evidence.
-- Implement, test and document automated and off-site backup.
+- Automate MCP report refresh while retaining fail-closed freshness and redaction controls.
+- Implement backup-integrity verification, perform a restore test and add an encrypted off-site copy.
+- Extend the MCP control plane with read-only Proxmox evidence before considering narrowly approval-gated development-pool actions.
 - Add redacted GitHub Actions, status-application and Nextcloud mobile captures.
 - Add a custom domain and update `NEXT_PUBLIC_SITE_URL`.
 - Run field Lighthouse monitoring after deployment and optimise any measured regressions.

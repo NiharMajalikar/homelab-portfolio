@@ -15,6 +15,7 @@ export function HomelabRecovery() {
       <div className="page-shell">
         <MotionReveal>
           <SectionHeading
+            id="migration-recovery-title"
             eyebrow="August 2026 case study"
             title="Network Migration & Recovery"
             description="A documented personal-homelab recovery sequence covering LAN migration, storage remediation, service configuration repair, DNS filtering and monitoring validation."
@@ -38,8 +39,9 @@ export function HomelabRecovery() {
                 <h3>Evidence boundary</h3>
                 <p>
                   The mobile Pi-hole capture does not establish a Tailscale
-                  path. Automated and off-site backup are planned next steps,
-                  not implemented capabilities.
+                  path. Two local backup sets and a manifest are present, but
+                  integrity, restore testing and encrypted off-site resilience
+                  remain planned.
                 </p>
               </div>
             </div>

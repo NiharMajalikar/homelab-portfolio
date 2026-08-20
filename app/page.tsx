@@ -6,6 +6,7 @@ import { EvidenceGallery } from "@/components/evidence-gallery";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
 import { HomelabRecovery } from "@/components/homelab-recovery";
+import { HomelabMcp } from "@/components/homelab-mcp";
 import { Navbar } from "@/components/navbar";
 import { ProjectsSection } from "@/components/projects-section";
 import { SkillsGrid } from "@/components/skills-grid";
@@ -34,6 +35,8 @@ export default function HomePage() {
           "Telecommunications",
           "Cloud infrastructure",
           "Endpoint management",
+          "Model Context Protocol",
+          "Secure infrastructure automation",
         ],
       },
       {
@@ -63,6 +66,7 @@ export default function HomePage() {
         <SkillsGrid />
         <ProjectsSection />
         <HomelabRecovery />
+        <HomelabMcp />
         <CertificationsGrid />
         <EducationGrid />
         <EvidenceGallery />

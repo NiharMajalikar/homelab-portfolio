@@ -40,7 +40,7 @@ export const projects: Project[] = [
       "Tailscale installed; external validation pending",
     ],
     plannedFeatures: [
-      "Automated and off-site backup with recovery testing",
+      "Automated backup-integrity verification, restore testing and encrypted off-site copy",
       "AI-assisted alert summarisation",
       "Automated health recommendations",
       "Centralised operational dashboard",
@@ -64,7 +64,59 @@ export const projects: Project[] = [
     status: "Active",
     featured: true,
     evidenceNote:
-      "Personal infrastructure project, not a production deployment. Automated and off-site backup remain planned; Tailscale external access remains unverified.",
+      "Personal infrastructure project, not a production deployment. Local backup sets exist, but integrity, restore testing and off-site resilience remain unverified; Tailscale external access also remains unverified.",
+  },
+  {
+    slug: "private-homelab-mcp",
+    title: "Private Homelab MCP Control Plane",
+    summary:
+      "A read-only, privacy-preserving MCP integration for inspecting bounded homelab health evidence without exposing a public listener or granting change access.",
+    description:
+      "A dedicated Ubuntu Server utility VM connects Codex Desktop to three parameterless evidence tools through SSH standard input/output over a private route. Reports are redacted and validated before cloud reasoning; version 1.0 cannot apply changes.",
+    categories: ["Homelab", "AI & Automation", "Cloud & Infrastructure"],
+    technologies: [
+      "Model Context Protocol",
+      "Proxmox VE",
+      "Ubuntu Server",
+      "SSH stdio",
+      "UFW",
+      "JSON Schema",
+    ],
+    challenge:
+      "Enable useful AI-assisted infrastructure inspection while preventing broad shell access, public exposure and leakage of private network or system details.",
+    approach:
+      "Separated the MCP utility from the production VM, used a forced read-only report command, exposed only three fixed tools and added size, schema, sensitivity and freshness checks that fail closed.",
+    outcomes: [
+      "Verified all three tools end to end from a fresh Codex task on 20 August 2026.",
+      "Tested fresh-report acceptance plus private-address and stale-report rejection.",
+      "Observed 6 of 6 approved services running, with system and data volumes at 49% and 6% used in the redacted snapshot.",
+    ],
+    currentFeatures: [
+      "Dedicated MCP utility VM",
+      "Three read-only, parameterless tools",
+      "Private SSH stdio transport with no public listener",
+      "Bounded, redacted JSON reports",
+      "One-hour freshness enforcement",
+      "Local draft workflow with explicit human approval boundary",
+    ],
+    plannedFeatures: [
+      "Scheduled report refresh",
+      "Backup-integrity verification and restore testing",
+      "Encrypted off-site backup copy",
+      "Read-only Proxmox evidence",
+      "Narrow approval-gated actions in a future development pool",
+    ],
+    links: [{ label: "View case study", href: "#homelab-mcp" }],
+    image: {
+      src: "/assets/diagrams/private-homelab-mcp-architecture-2026-08.svg",
+      alt: "Private homelab MCP architecture showing Codex Desktop connecting over SSH standard input and output to a dedicated utility virtual machine and three read-only redacted-report tools",
+      width: 1600,
+      height: 900,
+    },
+    status: "Active",
+    featured: true,
+    evidenceNote:
+      "Personal engineering environment, not a production deployment. The handbook and raw infrastructure details remain private. Version 1.0 is read-only and backup integrity is not yet verified.",
   },
   {
     slug: "homelab-status-app",

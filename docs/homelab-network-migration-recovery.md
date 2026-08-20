@@ -25,7 +25,7 @@ Tailscale external-access validation is pending. The mobile Pi-hole capture show
 6. Added the StevenBlack blocklist and rebuilt Gravity, restoring DNS filtering with 98,950 blocking domains.
 7. Refreshed Uptime Kuma monitor targets and verified all core service monitors healthy.
 
-Automated and off-site backup are not implemented. They remain the next planned resilience improvement.
+Later evidence collected on 20 August 2026 confirms that two local backup sets and a manifest are present. Backup integrity and restoreability have not been verified. Automated integrity verification, restore testing and encrypted off-site backup remain planned resilience improvements.
 
 ## Screenshot review record
 

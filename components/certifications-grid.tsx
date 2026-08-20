@@ -15,6 +15,7 @@ export function CertificationsGrid() {
       <div className="page-shell">
         <MotionReveal>
           <SectionHeading
+            id="certifications-title"
             eyebrow="Certifications"
             title="Verified credentials, clearly labelled."
             description="Only confirmed certifications are published. Credential identifiers remain private unless explicitly approved."

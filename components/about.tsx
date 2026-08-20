@@ -32,6 +32,7 @@ export function About() {
       <div className="page-shell">
         <MotionReveal>
           <SectionHeading
+            id="about-title"
             eyebrow="About"
             title="Engineering judgement grounded in evidence."
             description={profile.summary}

@@ -8,6 +8,7 @@ export function ProjectsSection() {
       <div className="page-shell">
         <MotionReveal>
           <SectionHeading
+            id="projects-title"
             eyebrow="Selected projects"
             title="Technical work with scope, evidence and limitations."
             description="Each case study separates implemented work from planned improvements and labels academic simulations clearly."

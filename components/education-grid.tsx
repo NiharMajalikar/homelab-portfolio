@@ -15,6 +15,7 @@ export function EducationGrid() {
       <div className="page-shell">
         <MotionReveal>
           <SectionHeading
+            id="education-title"
             eyebrow="Education"
             title="Engineering foundations across networks and communications."
             description="Relevant study areas and capstone work are summarised without publishing private records or student identifiers."

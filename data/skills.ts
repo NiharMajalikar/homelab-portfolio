@@ -66,6 +66,8 @@ export const skillCategories: SkillCategory[] = [
       "WireGuard",
       "Visual Studio Code",
       "Microsoft 365 administration fundamentals",
+      "Model Context Protocol",
+      "SSH stdio integration",
     ],
   },
   {
@@ -78,6 +80,9 @@ export const skillCategories: SkillCategory[] = [
       "PowerShell fundamentals",
       "REST APIs",
       "AI agents",
+      "Secure AI tool design",
+      "JSON schema validation",
+      "Least-privilege automation",
       "LangGraph fundamentals",
       "Infrastructure monitoring",
       "Service-status automation",

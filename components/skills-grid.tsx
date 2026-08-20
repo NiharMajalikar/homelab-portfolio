@@ -17,6 +17,7 @@ export function SkillsGrid() {
       <div className="page-shell">
         <MotionReveal>
           <SectionHeading
+            id="skills-title"
             eyebrow="Technical skills"
             title="A practical toolkit for connected systems."
             description="Grouped by working area without invented proficiency scores or unsupported years of experience."

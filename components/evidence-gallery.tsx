@@ -17,6 +17,7 @@ export function EvidenceGallery() {
       <div className="page-shell">
         <MotionReveal>
           <SectionHeading
+            id="evidence-title"
             eyebrow="Evidence gallery"
             title="Reviewed visuals behind the project summaries."
             description="Screenshots and diagrams are sanitised, captioned and presented without credentials, private addressing or student identifiers."
