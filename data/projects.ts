@@ -58,9 +58,9 @@ export const projects: Project[] = [
     ],
     image: {
       src: "/assets/diagrams/homelab-architecture-2026-08.svg",
-      alt: "Current homelab architecture showing the private LAN, Proxmox host, Ubuntu Docker virtual machine, Pi-hole, Uptime Kuma, Nextcloud with MariaDB, Portainer, Homelab Status App and Tailscale with validation pending",
+      alt: "Current homelab architecture showing private and pending access paths, the Proxmox host, Ubuntu Docker virtual machine, container services, local backup evidence and planned resilience work",
       width: 1600,
-      height: 900,
+      height: 1000,
     },
     status: "Active",
     featured: true,
