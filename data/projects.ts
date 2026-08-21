@@ -53,6 +53,7 @@ export const projects: Project[] = [
         external: true,
       },
       { label: "Recovery case study", href: "#migration-recovery" },
+      { label: "Detailed architecture", href: "#homelab-mcp" },
       { label: "View evidence", href: "#evidence" },
     ],
     image: {

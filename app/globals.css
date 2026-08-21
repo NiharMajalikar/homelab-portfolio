@@ -1040,6 +1040,130 @@ a {
   transform: rotate(90deg);
 }
 
+.mcp-reference {
+  margin-top: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface);
+  padding: clamp(1.25rem, 4vw, 1.75rem);
+  box-shadow: var(--shadow);
+}
+
+.mcp-reference-heading {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.mcp-reference-heading h3 {
+  margin: 0;
+  font-size: clamp(1.15rem, 3vw, 1.4rem);
+}
+
+.mcp-reference-heading .eyebrow {
+  margin-bottom: 0.35rem;
+}
+
+.mcp-reference-heading > p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.mcp-reference-grid {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.mcp-reference-card {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  background: #ffffff;
+}
+
+.mcp-reference-card.portrait {
+  width: 100%;
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.mcp-reference-card a {
+  position: relative;
+  display: block;
+  background: #ffffff;
+}
+
+.mcp-reference-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mcp-reference-card a > span {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  background: rgba(7, 17, 31, 0.88);
+  color: #ffffff;
+  padding: 0.5rem 0.7rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  backdrop-filter: blur(8px);
+}
+
+.mcp-reference-card a > span svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.mcp-reference-card figcaption {
+  display: grid;
+  gap: 0.35rem;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
+  padding: 1rem;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.mcp-reference-card figcaption strong {
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.mcp-reference-boundary {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-top: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 0.85rem;
+  background: var(--surface-muted);
+  padding: 1rem;
+}
+
+.mcp-reference-boundary svg {
+  flex: 0 0 auto;
+  width: 1.2rem;
+  color: var(--accent);
+}
+
+.mcp-reference-boundary p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
 .mcp-content-grid,
 .mcp-boundary-grid {
   display: grid;
@@ -1489,6 +1613,10 @@ a {
   .mcp-content-grid,
   .mcp-boundary-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .mcp-reference-heading {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: end;
   }
   .mcp-roadmap {
     grid-template-columns: 0.7fr 1.3fr;

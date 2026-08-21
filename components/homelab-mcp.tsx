@@ -2,16 +2,21 @@ import {
   ArrowRight,
   CheckCircle2,
   Clock3,
+  ExternalLink,
   LockKeyhole,
+  ShieldAlert,
   ShieldCheck,
 } from "lucide-react";
+import Image from "next/image";
 
 import {
   mcpArchitecture,
+  mcpReferencePanels,
   mcpRoadmap,
   mcpSnapshot,
   mcpTools,
 } from "@/data/homelab-mcp";
+import { assetPath } from "@/lib/site";
 
 import { MotionReveal } from "./motion-reveal";
 import { SectionHeading } from "./section-heading";
@@ -50,6 +55,66 @@ export function HomelabMcp() {
               </li>
             ))}
           </ol>
+        </MotionReveal>
+
+        <MotionReveal className="mcp-reference">
+          <div className="mcp-reference-heading">
+            <div>
+              <p className="eyebrow">Detailed architecture reference</p>
+              <h3>Infrastructure, service and approval flows</h3>
+            </div>
+            <p>
+              The supplied architecture has been divided into readable,
+              metadata-stripped panels. Open any panel for its full-size view.
+            </p>
+          </div>
+
+          <div className="mcp-reference-grid">
+            {mcpReferencePanels.map((panel) => (
+              <figure
+                className={`mcp-reference-card ${panel.layout}`}
+                key={panel.src}
+              >
+                <a
+                  href={assetPath(panel.src)}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Open full-size ${panel.title} diagram`}
+                >
+                  <Image
+                    src={assetPath(panel.src)}
+                    alt={panel.alt}
+                    width={panel.width}
+                    height={panel.height}
+                    sizes={
+                      panel.layout === "portrait"
+                        ? "(max-width: 900px) 100vw, 760px"
+                        : "(max-width: 1200px) 100vw, 1180px"
+                    }
+                  />
+                  <span>
+                    Open full-size panel
+                    <ExternalLink aria-hidden="true" />
+                  </span>
+                </a>
+                <figcaption>
+                  <strong>{panel.title}</strong>
+                  {panel.caption}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+
+          <div className="mcp-reference-boundary">
+            <ShieldAlert aria-hidden="true" />
+            <p>
+              This is an architecture reference, not proof of every path.
+              Tailscale external access and scheduled report collection remain
+              pending or planned. Local backup sets exist, but integrity and
+              restoreability are unverified; off-site backup and state-changing
+              MCP tools are not implemented.
+            </p>
+          </div>
         </MotionReveal>
 
         <div className="mcp-content-grid">

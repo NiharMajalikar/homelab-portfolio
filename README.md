@@ -20,6 +20,7 @@ A recruiter-focused portfolio for telecommunications, networking, IT support, cl
 - Sanitised evidence gallery plus clearly labelled planned captures
 - August 2026 network-migration and service-recovery case study
 - August 2026 private homelab MCP control-plane case study
+- Detailed, privacy-reviewed homelab architecture reference split into three responsive panels
 - Direct professional contact and thesis-access requests through LinkedIn
 - Open Graph, Twitter, canonical, manifest, robots, sitemap and JSON-LD metadata
 
@@ -90,6 +91,8 @@ Most content changes require no component edits:
 - Private homelab MCP claims and evidence boundaries: `docs/private-homelab-mcp-progress.md`
 
 Put approved images under `public/assets/` and public-safe downloads under `public/downloads/`. Supply accurate width, height, alt text and captions. Never publish raw coursework, credentials, student identifiers, private network details or unreviewed screenshots. The full master's thesis is stored privately in OneDrive; visitors request access through LinkedIn and receive access only after review.
+
+The detailed homelab reference panels live under `public/assets/diagrams/homelab-reference/`. Their captions must distinguish the current read-only MCP implementation from the planned report schedule, off-site backup and future approval-gated execution path.
 
 ## Project structure
 

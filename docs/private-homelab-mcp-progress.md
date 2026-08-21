@@ -29,6 +29,20 @@ The snapshot did not verify backup checksums or a restore. These figures are a p
 
 The current MCP integration cannot apply changes. It has no generic shell, arbitrary file access, Docker control, firewall control, Proxmox control or automatic remediation. Development requests produce local drafts only. A future change would require an exact action, scope, impact, rollback plan and post-change checks before explicit human approval. A model request is never treated as authorization.
 
+## Architecture-diagram publication record
+
+The detailed private-homelab diagram supplied in August 2026 was reviewed and divided into three readable public panels. The exported WebP files contain no embedded metadata, addresses, credentials, usernames, filesystem paths or raw configuration.
+
+The revised transparent PNG supplied on 21 August 2026 supersedes the earlier JPG render. The public panels were regenerated from the revised source, composited onto a white background and exported without the PNG's source metadata.
+
+The diagram combines current architecture with future design. Public captions must retain these boundaries:
+
+- Tailscale is installed, but the remote-client path does not replace the separate pending external-access validation.
+- Report collection remains manual in version 1.0; the schedule shown is planned.
+- Local backup sets exist, but integrity and restoreability remain unverified.
+- The encrypted off-site copy is planned.
+- The approval-gated execution branch is future design. The current MCP has no state-changing tool.
+
 ## Planned work — not implemented
 
 - Scheduled report refresh.
