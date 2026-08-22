@@ -10,6 +10,7 @@ import { HomelabMcp } from "@/components/homelab-mcp";
 import { Navbar } from "@/components/navbar";
 import { ProjectsSection } from "@/components/projects-section";
 import { SkillsGrid } from "@/components/skills-grid";
+import { ThesisJourney } from "@/components/thesis-journey";
 import { profile } from "@/data/profile";
 import { projects } from "@/data/projects";
 import { siteUrl } from "@/lib/site";
@@ -65,6 +66,7 @@ export default function HomePage() {
         <About />
         <SkillsGrid />
         <ProjectsSection />
+        <ThesisJourney />
         <HomelabRecovery />
         <HomelabMcp />
         <CertificationsGrid />

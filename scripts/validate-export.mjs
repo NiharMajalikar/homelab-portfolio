@@ -22,6 +22,7 @@ const requiredOutputFiles = [
   "assets/images/homelab-nextcloud-dashboard-2026-08.webp",
   "assets/images/homelab-pihole-mobile-dashboard-2026-08.webp",
   "assets/images/homelab-uptime-kuma-health-2026-08.webp",
+  "assets/thesis/thesis-journey-portfolio-diagrams-2026-08.png",
 ];
 
 for (const relativePath of requiredOutputFiles) {
@@ -51,6 +52,7 @@ const requiredSectionIds = [
   "about",
   "skills",
   "projects",
+  "thesis-journey",
   "migration-recovery",
   "homelab-mcp",
   "certifications",

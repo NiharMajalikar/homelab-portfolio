@@ -883,6 +883,193 @@ a {
   font-size: 0.66rem;
 }
 
+.thesis-journey-section {
+  background:
+    radial-gradient(circle at 12% 14%, var(--glow), transparent 30rem),
+    var(--surface-muted);
+}
+
+.thesis-diagram-list {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.thesis-diagram-list > * {
+  min-width: 0;
+}
+
+.thesis-diagram-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 1.1rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.thesis-diagram-heading {
+  display: grid;
+  gap: 1rem;
+  padding: clamp(1.25rem, 4vw, 1.75rem);
+}
+
+.thesis-diagram-heading .eyebrow {
+  margin-bottom: 0.45rem;
+}
+
+.thesis-diagram-heading h3 {
+  margin: 0;
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  letter-spacing: -0.035em;
+}
+
+.thesis-diagram-heading > p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.thesis-diagram-card figure {
+  margin: 0;
+  border-block: 1px solid var(--border);
+}
+
+.thesis-diagram-scroll {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  background: #000000;
+  scrollbar-color: var(--accent) #000000;
+  scrollbar-width: thin;
+}
+
+.thesis-diagram-scroll:focus-visible {
+  outline-offset: -4px;
+}
+
+.thesis-diagram-canvas {
+  position: relative;
+  width: 100%;
+  min-width: 72rem;
+  overflow: hidden;
+  background: #000000;
+}
+
+.thesis-diagram-canvas.overview {
+  aspect-ratio: 6000 / 3144;
+}
+
+.thesis-diagram-canvas.architecture {
+  min-width: 94rem;
+  aspect-ratio: 7500 / 3144;
+}
+
+.thesis-diagram-canvas.validation {
+  min-width: 100rem;
+  aspect-ratio: 10056 / 3144;
+}
+
+.thesis-diagram-canvas img {
+  position: absolute;
+  top: 0;
+  display: block;
+  max-width: none;
+  height: 100%;
+}
+
+.thesis-diagram-canvas.overview img {
+  left: 0;
+  width: 367.6%;
+}
+
+.thesis-diagram-canvas.architecture img {
+  left: -80%;
+  width: 294.08%;
+}
+
+.thesis-diagram-canvas.validation img {
+  left: -119.33%;
+  width: 219.33%;
+}
+
+.thesis-diagram-card figcaption {
+  display: grid;
+  gap: 0.85rem;
+  padding: 1rem clamp(1.25rem, 4vw, 1.75rem);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.thesis-diagram-card figcaption a {
+  display: inline-flex;
+  min-height: 2.5rem;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--accent);
+  font-weight: 720;
+}
+
+.thesis-diagram-card figcaption a:hover {
+  color: var(--accent-strong);
+}
+
+.thesis-diagram-card figcaption svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.thesis-diagram-points {
+  display: grid;
+  gap: 0.7rem;
+  list-style: none;
+  margin: 0;
+  padding: clamp(1.25rem, 4vw, 1.75rem);
+}
+
+.thesis-diagram-points li {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.thesis-diagram-points svg {
+  flex: 0 0 auto;
+  width: 1rem;
+  color: var(--accent);
+}
+
+.thesis-evidence-boundary {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  margin-top: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  background: var(--surface);
+  padding: 1.15rem;
+}
+
+.thesis-evidence-boundary svg {
+  flex: 0 0 auto;
+  width: 1.2rem;
+  color: var(--accent);
+}
+
+.thesis-evidence-boundary p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.84rem;
+  line-height: 1.65;
+}
+
+.thesis-evidence-boundary strong {
+  color: var(--text);
+}
+
 .filter-result {
   color: var(--text-muted);
   font-size: 0.8rem;
@@ -1587,6 +1774,17 @@ a {
   }
   .planned-captures {
     grid-template-columns: 0.8fr 1.2fr;
+  }
+  .thesis-diagram-heading {
+    grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+    align-items: end;
+  }
+  .thesis-diagram-card figcaption {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+  }
+  .thesis-diagram-points {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .recovery-layout {
     grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1.25fr);

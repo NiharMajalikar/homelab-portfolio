@@ -208,6 +208,7 @@ export const projects: Project[] = [
       "Digital-twin extensions",
     ],
     links: [
+      { label: "View thesis journey", href: "#thesis-journey" },
       { label: "Research evidence", href: "#evidence" },
       {
         label: "Request thesis access",
